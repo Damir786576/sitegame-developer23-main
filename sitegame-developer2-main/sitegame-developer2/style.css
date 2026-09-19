@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url("_mobile.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #202027;        
+    color: #1A1A1A;
+}
+
+
+.header {
+    box-sizing: border-box;
+    height: 787px;
+    background: #E1FF8F;
+    padding-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header__star {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.header__star--1 {
+    width: 60px;
+    top: 94px;
+    left: 63px;
+}
+
+.header__star--2 {
+    width: 30px;
+    top: 69px;
+    left: 156px;
+}
+
+.header__star--3 {
+    width: 25px;
+    top: 538px;
+    right: 448px;
+}
+
+.header__star--4 {
+    width: 70px;
+    top: 568px;
+    right: 365px;
+}
+
+.header__star--5 {
+    width: 550px;
+    top: 0;
+    right: 0;
+}
+
+.main__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-top: 80px;
+}
+
+.header__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.black-text {
+    color: #000000;
+    font-weight: 700;
+}
+
+.header__button {
+    width: 247px;
+    height: 66px;
+    border-radius: 60px;
+    border: 1px solid #202027;
+    padding: 16px 28px;
+    gap: 10px;
+    background: #202027;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+.animation__list { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    height: auto; 
+    padding-top: 27px; 
+    padding-right: 49px; 
+    padding-bottom: 27px; 
+    padding-left: 49px; 
+    background: #BCEC30; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(50px); 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 600; 
+    font-size: 18px; 
+    color: #000000; 
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+.animation__track {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+
+.star {
+    width: 72px;
+    flex-shrink: 0;
+    font-size: 30px;
+}
+
+.animation__list--text {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 4%;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.game {
+    max-width: 1440px;          
+    margin: 80px auto 0 auto;  
+}
+
+.game__name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 64px;           
+    text-align: left;
+    margin-bottom: 24px;
+    color: #FFFFFF; 
+}
+
+.game__title {
+    color: #FFFFFF;  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    max-width: 800px;
+    margin-bottom: 64px;
+}
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+
+.cart__game {
+    width: 378px;
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding-bottom: 20px;
+} 
+
+.cart-image {
+    display: block;
+    width: 378px;
+    height: 314px;
+    border-radius: 30px;
+}
+
+.cart__game-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #202027;
+    padding-top: 20px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+.cart__game-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: #202027;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.header__button {
+    cursor: pointer;
+}
+
+.cart__game-link {
+    text-decoration: none;
+    display: block;
+    width: 378px;
+    transition: transform 0.3s ease;
+}
+
+.cart__game-link:hover {
+    transform: scale(1.05);
+}
+
+.minigame {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 100px;
+}
+
+.minigame__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    text-align: left;
+    margin-bottom: 60px;
+    color: #FFFFFF;     
+}
+
+.minigame__cart {
+    width: 100%;
+}
+
+.play {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.play__game {
+    display: flex;
+    width: 1200px;
+    height: 500px;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+
+.play__image {
+    border-radius: 30px 0 0 30px;
+}
+
+.play__game-right .play__image {
+    border-radius: 0 30px 30px 0;
+}
+
+.play__card {
+    border-radius: 0 30px 30px 0;
+}
+
+.play__game-right .play__card {
+    border-radius: 30px 0 0 30px;
+}
+
+.play__game-left {
+    flex-direction: row;
+}
+
+.play__game-left .play__image {
+    width: 50%;
+    object-fit: cover;
+}
+
+.play__game-left .play__card {
+    width: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column; 
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 60px;
+}
+
+.play__game-right {
+    flex-direction: row-reverse;
+}
+
+.play__game-right .play__image {
+    width: 50%;
+    object-fit: cover;
+}
+
+.play__game-right .play__card {
+    width: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 60px;
+}
+
+.play__card {
+    background: white;
+}
+
+.play__name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #202027;
+    margin-bottom: 20px;
+}
+
+.play__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #202027;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+.play__button {
+    width: 200px;
+    padding: 16px 0;
+    background: #202027;
+    border: none;
+    border-radius: 60px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play__game {
+    transition: transform 0.3s ease;
+}
+
+.play__game:hover {
+    transform: scale(1.02);
+}
+
+.footer {
+    background: #BDED35;
+    padding: 60px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}
+
+.cart__game-link:nth-child(4),
+.cart__game-link:nth-child(6) {
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 1249px) {
+
+    .header {
+        height: 667px;
+        min-height: 667px;
+        padding-top: 40px;
+        overflow: hidden;
+    }
+
+
+    .header__star--1 {
+        width: 35px;
+        top: 97px;
+        left: 37px;
+    }
+
+  
+    .header__star--2 {
+        width: 21px;
+        top: 64px;
+        left: 92px;
+    }
+
+    .header__star--3 {
+        width: 21px;
+        bottom: 24px;
+        right: 86px;
+        top: auto;
+    }
+
+    .header__star--4 {
+        width: 35px;
+        bottom: 28px;
+        right: 32px;
+        top: auto;
+    }
+
+
+    .header__star--5 {
+        width: 180px;
+        height: auto;
+        top: 0;
+        right: 0;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .main__text {
+        font-size: 40px;
+        line-height: 49px;
+        max-width: 100%;
+        margin-top: 35px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .header__title {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .header__button {
+        width: 285px;
+        height: 55px;
+        font-size: 16px;
+        margin-top: 10px;
+        position: relative;
+        z-index: 2;
+    }
+}

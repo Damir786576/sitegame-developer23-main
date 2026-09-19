@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM задания</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #202027;
+            color: #fff;
+            padding: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .task {
+            background: #2a2a3a;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+        }
+        .task h2 {
+            color: #E1FF8F;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        button {
+            background: #E1FF8F;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-right: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .description {
+            background: #3a3a4a;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        hr {
+            margin: 20px 0;
+            border-color: #E1FF8F;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Задание 1 -->
+        <div class="task">
+            <h2>Задание 1. Скрытие и показ текста</h2>
+            <h1 id="mainTitle">Это заголовок, который можно скрыть</h1>
+            <button id="toggleButton">Скрыть</button>
+        </div>
+
+        <!-- Задание 2 -->
+        <div class="task">
+            <h2>Задание 2. Изменение стиля элемента</h2>
+            <p id="colorText">Этот абзац изменит цвет при нажатии на кнопку</p>
+            <button id="colorButton">Изменить цвет</button>
+        </div>
+
+        <!-- Задание 3 -->
+        <div class="task">
+            <h2>Задание 3. Динамическое изменение текста</h2>
+            <h1 id="changeableTitle">Старый текст</h1>
+            <button id="changeTextButton">Изменить текст</button>
+        </div>
+
+        <!-- Задание 4 и 5 (общее) -->
+        <div class="task">
+            <h2>Задания 4 и 5. Поиск и изменение элементов по классу</h2>
+            <p class="description">Описание 1</p>
+            <p class="description">Описание 2</p>
+            <p>Обычный абзац без класса</p>
+            <p class="description">Описание 3</p>
+            <button id="changeDescriptionButton">Изменить текст всех description</button>
+        </div>
+
+        <!-- Задание 6 -->
+        <div class="task">
+            <h2>Задание 6. Добавление нового элемента в DOM</h2>
+            <div id="paragraphContainer"></div>
+            <button id="addButton">Добавить элемент</button>
+        </div>
+
+        <!-- Задание 7 -->
+        <div class="task">
+            <h2>Задание 7. Удаление элемента</h2>
+            <div id="removeContainer">
+                <p class="description">Удаляемый абзац 1</p>
+                <p class="description">Удаляемый абзац 2</p>
+                <p class="description">Удаляемый абзац 3</p>
+            </div>
+            <button id="removeButton">Удалить элемент</button>
+        </div>
+    </div>
+
+    <script>
+        // Задание 1
+        const title = document.querySelector('#mainTitle');
+        const toggleBtn = document.querySelector('#toggleButton');
+        let isHidden = false;
+
+        toggleBtn.addEventListener('click', () => {
+            if (isHidden) {
+                title.style.display = 'block';
+                toggleBtn.textContent = 'Скрыть';
+                isHidden = false;
+            } else {
+                title.style.display = 'none';
+                toggleBtn.textContent = 'Показать';
+                isHidden = true;
+            }
+        });
+
+        // Задание 2
+        const colorText = document.querySelector('#colorText');
+        const colorBtn = document.querySelector('#colorButton');
+
+        colorBtn.addEventListener('click', () => {
+            colorText.style.color = 'blue';
+        });
+
+        // Задание 3
+        const changeableTitle = document.querySelector('#changeableTitle');
+        const changeTextBtn = document.querySelector('#changeTextButton');
+
+        changeTextBtn.addEventListener('click', () => {
+            changeableTitle.textContent = 'Привет, мир!';
+        });
+
+        // Задание 4 и 5
+        const changeDescBtn = document.querySelector('#changeDescriptionButton');
+
+        changeDescBtn.addEventListener('click', () => {
+            const descriptions = document.querySelectorAll('.description');
+            for (let i = 0; i < descriptions.length; i++) {
+                descriptions[i].textContent = 'Новый текст';
+            }
+        });
+
+        // Задание 6
+        const addBtn = document.querySelector('#addButton');
+        const container = document.querySelector('#paragraphContainer');
+
+        addBtn.addEventListener('click', () => {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'Новый абзац';
+            container.appendChild(newParagraph);
+        });
+
+        // Задание 7
+        const removeBtn = document.querySelector('#removeButton');
+
+        removeBtn.addEventListener('click', () => {
+            const firstDescription = document.querySelector('#removeContainer .description');
+            if (firstDescription) {
+                firstDescription.remove();
+            } else {
+                alert('Нет больше элементов для удаления');
+            }
+        });
+    </script>
+</body>
+</html>
