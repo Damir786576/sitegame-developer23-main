@@ -1,3 +1,37 @@
+@media (max-width: 1413px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .header {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .game,
+    .minigame,
+    .footer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .play__game {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 1024px) {
 .main__text {
     text-align: center;    
@@ -89,48 +123,46 @@
 }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .game {
-    display: none !important;
-}   
+        display: none !important;
+    }
 }
 
-@media (max-width: 1413px) {
+@media (min-width: 1024px) and (max-width: 1294px) {
 
-    html,
-    body {
+    .game .container {
         width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+        max-width: 860px;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    .header {
-        width: 100%;
-        max-width: 100%;
+    .game__name,
+    .game__title {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    .container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 40px;
-        padding-right: 40px;
+    .cart {
+        display: grid;
+        grid-template-columns: repeat(2, 378px);
+        justify-content: center;
+        align-items: stretch;
+        gap: 40px;
     }
 
-    .game,
-    .minigame,
-    .footer {
-        width: 100%;
-        max-width: 100%;
+    .cart__game-link {
+        width: 378px;
+        height: 100%;
+        margin: 0 !important;
     }
 
-    .play__game {
-        width: 100%;
-        max-width: 100%;
+    .cart__game {
+        width: 378px;
+        height: 100%;
+        min-height: 440px;
     }
-
-    .play__image,
-    .play__card {
-        max-width: 50%;
-    }
-
 }
